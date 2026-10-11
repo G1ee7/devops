@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#173f35">
+    <meta name="description" content="CI/CD конвейерінде статикалық код талдауын автоматтандыру: жоба идеясы, тексеру кезеңдері және интерактивті оқу мысалы.">
+    <title>CodeGuard — Код сапасы әр қадамда</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Негізгі мазмұнға өту</a>
+    <header class="header wrap">
+      <a class="brand" href="#" aria-label="CodeGuard — басты бет"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span>CodeGuard<span class="brand-dot">.</span></a>
+      <nav aria-label="Негізгі навигация"><a href="#about">Жоба туралы</a><a href="#pipeline">Конвейер</a><a href="#tools">Құралдар</a></nav>
+      <a class="repo-link" href="https://github.com/G1ee7/devops" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> DEVOPS / ОҚУ ЖОБАСЫ</p>
+          <h1 id="hero-title">Сенімді код.<br> <span>Сапалы релиз.</span></h1>
+          <p class="hero-description">CI/CD конвейерінде статикалық код талдауын автоматтандыру жүйесін әзірлеу.</p>
+          <p class="hero-note">Қателерді ерте анықтау. Тексеруді автоматтандыру. Әр өзгерісті сенімді жариялауға бір қадам жақындау.</p>
+          <div class="hero-actions"><a class="button primary" href="#demo">Талдауды байқап көру <span aria-hidden="true">↗</span></a><a class="text-link" href="#pipeline">Қалай жұмыс істейді <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-caption"><span aria-hidden="true">⌘</span> GitHub-тағы кодтан Cloudflare-дегі сайтқа дейін</div>
+        </div>
+        <div class="hero-visual" aria-label="Кодты тексеру конвейерінің иллюстрациясы">
+          <div class="visual-topline"><span>WORKFLOW / STATIC ANALYSIS</span><span class="sample-tag">ҮЛГІ</span></div>
+          <div class="code-window">
+            <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>src / app.js</span><span>JS</span></div>
+            <div class="code-body" aria-hidden="true"><div><b>01</b><span class="code-purple">const</span> project = {</div><div><b>02</b>&nbsp; name: <span class="code-green">'CodeGuard'</span>,</div><div><b>03</b>&nbsp; quality: <span class="code-green">'first'</span>,</div><div><b>04</b>&nbsp; automated: <span class="code-orange">true</span></div><div><b>05</b>};</div><div class="code-empty"><b>06</b></div><div><b>07</b><span class="code-muted">// Әр өзгеріс тексеруден өтеді</span></div><div><b>08</b><span class="code-purple">export default</span> project;</div></div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="scan-row"><span class="scan-icon" aria-hidden="true">✓</span><div><strong>Статикалық талдау</strong><small>ESLint · Stylelint · Semgrep</small></div><span class="pass-label">PASSED</span></div>
+          <div class="deploy-row"><span aria-hidden="true">↳</span><span>Келесі қадам</span><strong>Cloudflare <span aria-hidden="true">↗</span></strong></div>
+          <p class="visual-caption">Конвейердің жоспарланған жұмысының мысалы</p>
+        </div>
+      </section>
+      <div class="stack-strip"><div class="wrap stack-inner"><span class="stack-label">ЖОБАНЫҢ ТЕХНОЛОГИЯЛАРЫ</span><span>GitHub Actions</span><span>ESLint</span><span>Stylelint</span><span>Semgrep</span><span class="cloudflare-word">☁ Cloudflare</span></div></div>
+      <section class="about section wrap" id="about" aria-labelledby="about-title">
+        <div><p class="eyebrow">01 / ЖОБА ТУРАЛЫ</p><h2 id="about-title">Сапаны тексеру —<br> процестің бір бөлігі.</h2></div>
+        <div class="about-content"><p class="section-intro">Кодты жазу — жұмыстың басы ғана. Бұл жобаның мақсаты — әр өзгерісті автоматты талдап, қателерді жариялауға дейін анықтайтын конвейер құру.</p><div class="about-points"><div><span class="point-number">01</span><h3>Ерте анықтау</h3><p>Кодтағы ықтимал қателер мен қауіпті үлгілерді өзгеріс енгізілген кезде табу.</p></div><div><span class="point-number">02</span><h3>Бірыңғай талап</h3><p>Әр commit пен pull request үшін бірдей тексеру ережелерін қолдану.</p></div></div></div>
+      </section>
+      <section class="pipeline-section" id="pipeline" aria-labelledby="pipeline-title"><div class="wrap section">
+        <div class="section-heading"><div><p class="eyebrow">02 / ЖҰМЫС ПРИНЦИПІ</p><h2 id="pipeline-title">Өзгерістен жариялауға дейін.</h2></div><span class="outline-tag">Жоспарланған конвейер</span></div>
+        <ol class="pipeline"><li><span class="step-index">01 <span aria-hidden="true">↗</span></span><h3>Кодты жіберу</h3><p>Әзірлеуші өзгерісті GitHub репозиторийіне жібереді.</p><span class="step-code">git push</span></li><li><span class="step-index">02 <span aria-hidden="true">→</span></span><h3>Талдауды іске қосу</h3><p>GitHub Actions статикалық талдау құралдарын іске қосады.</p><span class="step-code">static analysis</span></li><li><span class="step-index">03 <span aria-hidden="true">✓</span></span><h3>Нәтижені тексеру</h3><p>Қате табылса, конвейер тоқтайды. Түзетуден кейін қайта тексеріледі.</p><span class="step-code">quality gate</span></li><li><span class="step-index">04 <span aria-hidden="true">☁</span></span><h3>Сайтты жариялау</h3><p>Негізгі тармақ тексеруден сәтті өтсе, сайт Cloudflare-ге жарияланады.</p><span class="step-code">deploy</span></li></ol>
+        <p class="pipeline-note"><span aria-hidden="true">ⓘ</span> Қазір лендинг әзірленді. Нақты CI/CD тексерулері мен Cloudflare-ге жариялау келесі кезеңдерде қосылады.</p>
+      </div></section>
+      <section class="demo section wrap" id="demo" aria-labelledby="demo-title">
+        <div class="demo-copy"><p class="eyebrow">03 / ИНТЕРАКТИВТІ МЫСАЛ</p><h2 id="demo-title">Бір қате.<br> Бір пайдалы тексеру.</h2><p class="section-intro">JavaScript-та <code>==</code> мәндерді салыстырғанда типтерді түрлендіреді. <code>eqeqeq</code> ережесі айқын салыстыру үшін <code>===</code> қолдануды ұсынады.</p><p class="demo-instruction">Мысалды таңдаңыз да, талдауды іске қосыңыз.</p><div class="demo-legend"><span class="legend-dot"></span> Браузердегі оқу симуляциясы</div><p class="demo-disclaimer">Бұл мысал ESLint-ті іске қоспайды және репозиторийдің нақты күйін көрсетпейді.</p></div>
+        <div class="demo-panel"><div class="demo-toolbar"><span>example.js</span><div class="example-options" role="group" aria-label="Код мысалын таңдау"><button type="button" class="example-choice active" data-example="error" aria-pressed="true">Қате бар</button><button type="button" class="example-choice" data-example="fixed" aria-pressed="false">Түзетілген</button></div></div><pre class="demo-code"><code id="example-code">const value = '5';
+
+if (value == 5) {
+  console.log('Мәндер тең');
+}</code></pre><div class="demo-controls"><span class="rule-label">RULE: eqeqeq</span><button type="button" class="button primary run-button" id="run-analysis"><span aria-hidden="true">▷</span> Талдауды іске қосу</button></div><div class="analysis-result" id="analysis-result" role="status" aria-live="polite" aria-atomic="true"><span class="result-icon" aria-hidden="true">·</span><div><strong>Тексеруге дайын</strong><p>Нәтиже осы жерде көрсетіледі.</p></div></div></div>
+      </section>
+      <section class="tools-section section wrap" id="tools" aria-labelledby="tools-title"><div class="section-heading"><div><p class="eyebrow">04 / ҚҰРАЛДАР ЖИЫНТЫҒЫ</p><h2 id="tools-title">Әр құралдың өз міндеті бар.</h2></div><p class="heading-aside">Келесі кезеңде конвейерге<br> қосылатын талдау құралдары.</p></div><div class="tools-grid"><article class="tool"><span class="tool-icon js-icon" aria-hidden="true">JS</span><span class="tool-category">КОД САПАСЫ</span><h3>ESLint <span aria-hidden="true">↗</span></h3><p>JavaScript кодындағы ықтимал қателерді анықтайды және белгіленген ережелерді тексереді.</p><a href="https://eslint.org/" target="_blank" rel="noopener noreferrer">Құжаттаманы ашу <span class="sr-only">— ESLint</span><span aria-hidden="true">↗</span></a></article><article class="tool"><span class="tool-icon css-icon" aria-hidden="true">{ }</span><span class="tool-category">СТИЛЬ САПАСЫ</span><h3>Stylelint <span aria-hidden="true">↗</span></h3><p>CSS-тегі қателерді тауып, стильдердің бірізді және түсінікті болуына көмектеседі.</p><a href="https://stylelint.io/" target="_blank" rel="noopener noreferrer">Құжаттаманы ашу <span class="sr-only">— Stylelint</span><span aria-hidden="true">↗</span></a></article><article class="tool"><span class="tool-icon security-icon" aria-hidden="true">⌘</span><span class="tool-category">ҚАУІПСІЗДІК</span><h3>Semgrep <span aria-hidden="true">↗</span></h3><p>Ережелер арқылы кодтағы ықтимал осалдықтар мен қауіпті бағдарламалау үлгілерін іздейді.</p><a href="https://semgrep.dev/docs/" target="_blank" rel="noopener noreferrer">Құжаттаманы ашу <span class="sr-only">— Semgrep</span><span aria-hidden="true">↗</span></a></article></div></section>
+      <section class="closing wrap"><div><p class="eyebrow">КОД АШЫҚ. ПРОЦЕСС ТҮСІНІКТІ.</p><h2>Жобаны ішінен қараңыз.</h2><p>Бастапқы код пен іске қосу нұсқаулығы — GitHub-та.</p></div><a class="button light" href="https://github.com/G1ee7/devops" target="_blank" rel="noopener noreferrer">Репозиторийді ашу <span aria-hidden="true">↗</span></a><span class="closing-decoration" aria-hidden="true">&lt;/&gt;</span></section>
+    </main>
+    <footer class="footer wrap"><a class="brand" href="#">CodeGuard<span class="brand-dot">.</span></a><p>CI/CD және статикалық код талдауы · Оқу жобасы</p><a href="#main">Жоғарыға <span aria-hidden="true">↑</span></a></footer>
+  </body>
+</html>

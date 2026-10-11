@@ -1,0 +1,11 @@
+{
+  "name": "codeguard-landing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Educational landing page about automated static analysis in CI/CD",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
