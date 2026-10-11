@@ -6,6 +6,10 @@
   "description": "Educational landing page about automated static analysis in CI/CD",
   "scripts": {
     "dev": "node scripts/serve.mjs",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.149.0"
   }
 }
